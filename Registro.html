@@ -14,44 +14,47 @@
     <title>Registrarse</title>
 </head>
 
+<!DOCTYPE html>
 
 <h1>Crear cuenta</h1>
 <p>Completa tus datos para registrarte.</p>
 
 <hr>
 
-<form action="login.html" method="get">
+<form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="9f4c6eeb-5a91-4ac0-b427-4c4e11591c02">
+
     <label for="nombre">Nombre completo:</label>
     <br>
-    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
 
     <br>
     <br>
 
     <label for="usuario">Usuario:</label>
     <br>
-    <input type="text" id="usuario" name="usuario" placeholder="Elige un usuario">
+    <input type="text" id="usuario" name="usuario" placeholder="Elige un usuario" required>
 
     <br>
     <br>
 
     <label for="correo">Correo electronico:</label>
     <br>
-    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo">
+    <input type="email" id="correo" name="email" placeholder="Escribe tu correo" required>
 
     <br>
     <br>
 
     <label for="password">Contraseña:</label>
     <br>
-    <input type="password" id="password" name="password" placeholder="Crea una contraseña">
+    <input type="password" id="password" name="password" placeholder="Crea una contraseña" required>
 
     <br>
     <br>
 
     <label for="password2">Confirmar contraseña:</label>
     <br>
-    <input type="password" id="password2" name="password2" placeholder="Repite tu contraseña">
+    <input type="password" id="password2" name="password2" placeholder="Repite tu contraseña" required>
 
     <br>
     <br>
@@ -63,6 +66,8 @@
 
 <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesion aqui</a></p>
 
+</body>
+</html>
 
 </body>
 </html>
