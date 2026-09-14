@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px 15px;         /* Padding (aire interno) */
+    border: 3px solid #1a252f;  /* Border (límite visible) */
+    margin: 0 0 20px 0;         /* Margin (espacio transparente exterior) */
+    text-align: center;
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 20px 15px 25px;     /* Padding shorthand (Arriba, Izq/Der, Abajo) */
+    border: 2px solid #e0e0e0;   /* Border */
+    margin: 15px 0 20px 0;      /* Margin */
+    border-radius: 4px;
+}
