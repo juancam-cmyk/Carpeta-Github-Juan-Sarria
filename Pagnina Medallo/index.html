@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIM Oficial - El Equipo del Pueblo</title>
+    
+    <!-- Librería Bootstrap 5 CDN (Obligatoria según taller) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Contacto Superior -->
+    <div class="contacto">
+        <span class="telefono">📞 (604) 5906934</span>
+        <a href="https://tiendadim.com/" target="_blank">Tienda Oficial</a>
+    </div>
+
+    <!-- Navegación Responsiva con Menú Hamburguesa en móvil (<992px) -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-dim sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="EscudoNuevo2026.png" alt="Escudo DIM" class="logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+      
+                    <li class="nav-item"><a class="nav-link fw-bold text-warning" href="calculadora.html">Calculadora DIM</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Sección Principal) -->
+    <section id="inicio" class="hero-section py-5 text-center text-white">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Independiente Medellín</h1>
+            <p class="lead">Plataforma Oficial de Servicios y Novedades del Equipo del Pueblo</p>
+            <a href="#servicios" class="btn btn-danger btn-lg mt-3 fw-bold">Ver Servicios</a>
+        </div>
+    </section>
+
+    <main class="container my-5">
+      
+        <!-- Banner Principal -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <img src="images (2).jpg" alt="La Cantera DIM" class="banner img-fluid rounded">
+            </div>
+        </div>
+       
+        <!-- Próximo Partido -->
+        <section class="seccion text-center mb-5">
+            <h2>Próximo Partido</h2>
+            <div class="marcador p-4 rounded mt-3">
+                <h3>Independiente Medellín VS Atlético Nacional</h3>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE SERVICIOS -->
+        <section id="servicios" class="seccion text-center mb-5">
+            <h2 class="mb-4">Actualidad / Servicios</h2>
+            
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Tarjeta 1: APP Oficial -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0 bg-danger text-white">
+                            <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+                                <h3 class="h4 fw-bold">APP Oficial</h3>
+                                <p class="card-text mt-2">¡Descárgala ya y enterate de todo!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Entrenamiento -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="images (1).jpg" class="card-img-top" alt="Entrenamiento DIM">
+                            <div class="card-body d-flex flex-column justify-content-between text-center">
+                                <h3 class="h5 fw-bold text-dark">Preparación a tope</h3>
+                                <p class="card-text text-muted">El equipo profesional afina detalles en la sede Raúl Giraldo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Comunidad -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0 bg-danger text-white">
+                            <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+                                <h3 class="h4 fw-bold">Comunidad</h3>
+                                <p class="card-text mt-2">👥 ¡Únete ahora al grupo del pueblo!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Tienda/Abonos -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0 bg-dark text-white">
+                            <div class="card-body d-flex flex-column justify-content-center text-center p-4">
+                                <h3 class="h4 fw-bold">Abonos 2026</h3>
+                                <p class="card-text mt-2">Asegura tu silla en el Atanasio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos -->
+        <section id="videos" class="seccion mb-5 text-center">
+            <h2>VIDEOS</h2>
+            <div class="contenedor-videos p-3 rounded shadow-sm bg-white mt-3">
+                <div class="video-principal mb-3">
+                    <iframe src="https://www.youtube.com/embed/Z_X-hQxXvXo" title="Presentación Juan Fernando Quintero" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="row g-2">
+                    <div class="col-6 col-md-3">
+                        <iframe src="https://www.youtube.com/embed/Z_X-hQxXvXo" class="w-100" style="aspect-ratio: 16/9;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <iframe src="https://www.youtube.com/embed/Z_X-hQxXvXo" class="w-100" style="aspect-ratio: 16/9;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <iframe src="https://www.youtube.com/embed/Z_X-hQxXvXo" class="w-100" style="aspect-ratio: 16/9;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <iframe src="https://www.youtube.com/embed/Z_X-hQxXvXo" class="w-100" style="aspect-ratio: 16/9;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="botones-video mt-3">
+                    <button class="btn btn-danger me-2">Cargar más...</button>
+                    <button class="btn btn-dark">▶ Suscríbete</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <a href="https://tiendadim.com/" target="_blank" class="text-white text-decoration-none fw-bold d-block mb-2">TiendaDIM.com</a>
+            <p class="mb-1">© 2026 El Equipo del Pueblo S.A.</p>
+            <p class="mb-0 text-white-50">Desarrollado por Juan Camilo Sarria</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="Java.js"></script>
+
+</body>
+</html>

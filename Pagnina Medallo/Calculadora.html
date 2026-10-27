@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Interactiva - DIM</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+
+    <!-- Contacto Superior -->
+    <div class="contacto">
+        <span class="telefono">📞 (604) 5906934</span>
+        <a href="https://tiendadim.com/" target="_blank">Tienda Oficial</a>
+    </div>
+
+    <!-- Navegación Responsiva con Menú Hamburguesa -->
+    <nav class="navbar navbar-expand-lg navbar-dark nav-dim sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="EscudoNuevo2026.png" alt="Escudo DIM" class="logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#noticias">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#videos">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold text-warning" href="calculadora.html">Calculadora DIM</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado de la Sección -->
+    <section class="hero-section py-4 text-center text-white">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Panel Interactivo DIM</h1>
+            <p class="lead mb-0">Calculadora de Compras y Simulación de Ventas</p>
+        </div>
+    </section>
+
+    <main class="container my-5">
+        <div class="row g-4">
+            
+            <!-- 1. Tarjeta Calculadora de Tienda y Abonos -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow border-0 h-100 panel-card">
+                    <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between align-items-center">
+                        <span>🛒 Calculadora de Compras</span>
+                        <span class="badge bg-danger">JavaScript</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <label for="precioInput" class="form-label fw-semibold">Precio del producto ($):</label>
+                            <input type="number" id="precioInput" class="form-control" value="350000" min="0">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="cantidadInput" class="form-label fw-semibold">Cantidad de artículos:</label>
+                            <input type="number" id="cantidadInput" class="form-control" value="1" min="1">
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="socioCheck">
+                            <label class="form-check-label fw-semibold" for="socioCheck">
+                                Soy Socio DIM (Aplica 10% de descuento)
+                            </label>
+                        </div>
+                        
+                        <button class="btn btn-danger w-100 py-2 fw-bold text-uppercase" onclick="ejecutarCalculadora()">
+                            Calcular Total
+                        </button>
+                        
+                        <div id="resultadoCalculadora" class="alert alert-secondary mt-4 mb-0 text-center">
+                            Ingresa los datos y presiona "Calcular Total".
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Tarjeta Simulador de Campaña y Boletas VIP -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow border-0 h-100 panel-card">
+                    <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between align-items-center">
+                        <span>📊 Simulador de Metas y Boletería</span>
+                        <span class="badge bg-dark">Ciclos & Logic</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold text-dark">Meta de Abonos (Campaña 5 Días)</h5>
+                        <p class="text-muted small">Ejecuta un ciclo <code>for</code> que acumula ventas diarias y valida la meta global con <code>if / else</code>.</p>
+                        
+                        <button class="btn btn-dark w-100 mb-3 fw-bold" onclick="simularCampana()">
+                            Simular Campaña de Ventas
+                        </button>
+                        
+                        <div id="resultadoCampana" class="alert alert-secondary text-preline mb-4" style="white-space: pre-line;">
+                            Presiona el botón para iniciar la simulación.
+                        </div>
+
+                        <hr class="my-4">
+
+                        <h5 class="fw-bold text-dark">Venta Boletería VIP Clásico</h5>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span>Boletas Disponibles:</span>
+                            <span id="boletasDisponibles" class="badge-boletas">4</span>
+                        </div>
+                        
+                        <button class="btn btn-warning w-100 fw-bold" id="btnVender" onclick="venderBoleta()">
+                            🎟️ Vender 1 Boleta VIP
+                        </button>
+                        
+                        <div id="resultadoBoletas" class="mt-3 text-center fw-bold"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Botón para regresar -->
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-dark fw-bold">← Volver al Inicio</a>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <a href="https://tiendadim.com/" target="_blank" class="text-white text-decoration-none fw-bold d-block mb-2">TiendaDIM.com</a>
+            <p class="mb-1">© 2026 El Equipo del Pueblo S.A.</p>
+            <p class="mb-0 text-white-50">Desarrollado por Juan Camilo Sarria</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Calculadora.js"></script>
+</body>
+</html>
