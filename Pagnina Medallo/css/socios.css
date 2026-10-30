@@ -1,0 +1,102 @@
+
+body {
+    /* Mantenemos tus colores en un degradado transparente y agregamos la URL de la imagen */
+    background-image: linear-gradient(135deg, rgba(11, 28, 58, 0.8) 0%, rgba(26, 26, 26, 0.8) 50%, rgba(227, 24, 43, 0.8) 100%), url('../img/estadio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Título Principal */
+h1.display-5 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #e3182b;
+    padding-bottom: 10px;
+}
+
+.text-muted {
+    color: #cccccc !important;
+}
+
+/* Tarjeta del Formulario (La Taquilla) */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+    overflow: hidden;
+}
+
+/* Cabecera de la Tarjeta */
+.card-header {
+    background-color: #e3182b !important; /* Rojo DIM */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-bottom: none;
+}
+
+/* Campos del formulario */
+.form-label {
+    color: #0b1c3a; /* Azul DIM para las etiquetas */
+    font-size: 0.95rem;
+}
+
+.form-control, .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0b1c3a;
+    box-shadow: 0 0 0 0.25rem rgba(11, 28, 58, 0.25);
+}
+
+/* Botón de Procesar */
+#btn-procesar {
+    background-color: #0b1c3a; /* Azul oscuro */
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#btn-procesar:hover {
+    background-color: #e3182b; /* Cambia a rojo al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Caja de Resultados (Alertas) */
+#caja-resultado {
+    border-radius: 10px;
+    border: none;
+    animation: aparecer 0.4s ease-out;
+}
+
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-left: 5px solid #198754;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+    border-left: 5px solid #dc3545;
+}
+
+/* Animación para cuando aparece el resultado */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
